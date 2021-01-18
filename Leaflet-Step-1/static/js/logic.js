@@ -55,14 +55,25 @@ legend.onAdd = function() {
   var labels = [];
 
 // Add min & max
-  var legendInfo = "<h1>Earthquake Magnitude</h1>" +
+  var legendInfo = "<h2>  Earthquake Magnitude  </h2>" +
     "<div class=\"labels\">" + "</div>";
 
   div.innerHTML = legendInfo;
 
   grades.forEach(function(grades, index) {
-    labels.push("<li style=\"background-color: " + colors[index] + "\">" + "Magnitude" + [index]+ 
-    "&ndash;" + [index+1] + "</li>");
+    if (index === 0){
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude less than " + [index +1 ]+ 
+      "  </li>");
+    }
+    else if (index === 5){
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
+      " and Greater" + "  </li>");
+    }
+    else{
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
+      "&ndash;" + [index+1] + "  </li>");
+    }
+
   });
 
   div.innerHTML += "<ul>" + labels.join("") + "</ul>";

@@ -44,3 +44,8 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+ul {
+  list-style: none;
+  margin-left: 0;
+}
