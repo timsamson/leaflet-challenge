@@ -9,6 +9,8 @@ d3.json(usgsUrl, function(data) {
   var earthquakeData = data.features
   d3.json(platesUrl, function(data){
     var platesData = data.features
+
+    createMap(earthquakeData,platesData)
   })
 });
 
@@ -16,7 +18,7 @@ function createMap(earthquakeData, platesData) {
   var EarthquakeMarkers = earthquakeData.map((feature) =>
     L.circleMarker([feature.geometry.coordinates[1],feature.geometry.coordinates[0]],{
         radius: magCheck(feature.properties.mag),
-        stroke: false,
+        stroke: true,
         color: 'black',
         opacity: 1,
         weight: 0.5,
@@ -74,13 +76,6 @@ var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/
   maxZoom: 18,
   id: "mapbox/outdoors-v11",
   accessToken: API_KEY
-});
-
-// Create our map, giving it the streetmap and earthquakes layers to display on load
-var myMap = L.map("map", {
-  center: [37.09, -95.71],
-  layers: [streetmap, earthquakes],
-  zoom: 5
 });
 
 //Define basemap
@@ -142,9 +137,9 @@ legend.onAdd = function() {
 legend.addTo(myMap);
 
 //baselayer control
-L.control.layers(baseMaps, overlayMaps, {
-  collapsed: false
-}).addTo(myMap);
+  L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+  }).addTo(myMap);
 }
 
 //Magnitude Color
