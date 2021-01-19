@@ -50,30 +50,31 @@ legend.onAdd = function() {
   var colors = ["#98ee00","#d4ee00","#eecc00","#ee9c00","#ea822c","#ea2c2c"];
   var labels = [];
 
-// Legend Label
-  var legendInfo = "<h2>Magnitude Level</h2>" +
-    "<div class=\"labels\">" + "</div>";
+// Legend
+var legendInfo = "<h3><center>  Magnitude Level</center></h3>" +
+"<div class=\"labels\">" + "</div>";
 
-  div.innerHTML = legendInfo;
+div.innerHTML = legendInfo;
 
-  grades.forEach(function(grades, index) {
-    if (index === 0){
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude less than " + [index +1 ]+ 
-      "  </li>");
-    }
-    else if (index === 5){
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
-      " and Greater" + "  </li>");
-    }
-    else{
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
-      "&ndash;" + [index+1] + "  </li>");
-    }
-  });
+grades.forEach(function(grades, index) {
+if (index === 0){
+  labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Less than " + [index +1 ]+ 
+  "  </li>");
+}
+else if (index === 5){
+  labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  " + [index]+ 
+  " and Greater" + "  </li>");
+}
+else{
+  labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  " + [index]+ 
+  "&ndash;" + [index+1] + "  </li>");
+}
 
-  div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-  return div;
-  };
+});
+
+div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+return div;
+};
 
 legend.addTo(myMap);
 

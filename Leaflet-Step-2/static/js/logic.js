@@ -43,7 +43,7 @@ function createMap(earthquakeData, platesData) {
   var plates = L.geoJSON(platesData, {
     onEachFeature: makePolyline,
       style: {
-        color: "red",
+        color: "grey",
         opacity: 0.9
       }
 })
@@ -110,7 +110,7 @@ legend.onAdd = function() {
   var colors = ["#98ee00","#d4ee00","#eecc00","#ee9c00","#ea822c","#ea2c2c"];
   var labels = [];
 
-// Add min & max
+// Legend
   var legendInfo = "<h3><center>  Magnitude Level</center></h3>" +
     "<div class=\"labels\">" + "</div>";
 
