@@ -48,6 +48,7 @@ Click on the makers in either activity for more in depth data visualized as a po
 <br>
 <h3>Using the Visualization</h3>
 <ol><li><p>Clone Repo</a></p></li>
+<li>BEFORE YOU RUN THIS CODE: In the config.js file in either of the two js folders, you will need to add your MapBox API key, and save the file"</li>
 <li><p>Open repo and activate local server.
 </p></li>
 <li><p>Navigate in browser window to index.html for the respective visualization you wish to view. (Either Step-1 or Step-2)</p></li>
