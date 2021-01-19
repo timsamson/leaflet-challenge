@@ -51,7 +51,7 @@ legend.onAdd = function() {
   var labels = [];
 
 // Legend Label
-  var legendInfo = "<h2>  Earthquake Magnitude  </h2>" +
+  var legendInfo = "<h2>Magnitude Level</h2>" +
     "<div class=\"labels\">" + "</div>";
 
   div.innerHTML = legendInfo;

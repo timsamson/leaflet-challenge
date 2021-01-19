@@ -48,4 +48,10 @@ caption {
 ul {
   list-style: none;
   margin-left: 0;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  
 }
+
