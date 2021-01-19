@@ -1,7 +1,14 @@
 # leaflet-challenge
-<h2>Earthquakes around the World</h2>
+<h3>Earthquakes around the World</h3>
 
-insert copy here
+!["USGS"](https://github.com/timsamson/leaflet-challenge/blob/main/Images/USGS.png)
+
+<p>The United States Geological Survey, or USGS fis responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change. This visualization maps and helps to visualize earthquake data from around the world. </p>
+<p>In Step-1 a simple visualization is offered which maps and colors the quakes based on thier coordinates and magnitude.</p>
+<p>
+A more comprehensive visualtion is offered in step two which allows you to select your base map from 4 available options and also select your layers showing techtonic plates, earthquakes or both. In Step 2 in addition to the markers showing the location and magnitude of the quakes, the opacity of the color within the circle also coorelates to teh depth of the quake. (a lighter or paler color indicating a shallow quake).</p>
+<p>
+Click on the makers in either activity for more in depth data visualized as a pop-up. </p>
 
 <br>
 <h3>Example Visualizations</h3>
