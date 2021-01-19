@@ -43,9 +43,14 @@ insert copy here
 <ol><li><p>Clone Repo</a></p></li>
 <li><p>Open repo and activate local server.
 </p></li>
-<li><p>Navigate in browser window to index.html for the respective visualization.</p></li>
-<li><p>instructions Here</p></li>
-<li><p>instructions 2</p></li></ol>
+<li><p>Navigate in browser window to index.html for the respective visualization you wish to view. (Either Step-1 or Step-2)</p></li>
+<li><p>For Step 1</p><ul>
+<li>View the Data on the Map, Legend coorosponds to magnitude level.</li><ul></li>
+<li><p>For Step 2</p>Advanced Control Options for map.<ul>
+<li>To use: From the Layer Select menu in the upper right hand corner select one base layer and one or both overlays.</li>
+<li>Base Layer Options:<ul><li>Street View</li><li>Satellite</li><li>Dark Map</li><li>Outdoor Map</li></ul></li>
+<li>Overlay Options:<ul><li>Earthquakes</li><li>Techtonic Plates</li></ul></li>
+</li></ol>
 <br>
 
 <h3>Dependencies</h3>
