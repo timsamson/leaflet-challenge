@@ -45,8 +45,8 @@ insert copy here
 </p></li>
 <li><p>Navigate in browser window to index.html for the respective visualization you wish to view. (Either Step-1 or Step-2)</p></li>
 <li><p>For Step 1</p>
-<ul><li>View the Data on the Map, Legend coorosponds to magnitude level.</li>
-<li>View the Data on the Map, Legend coorosponds to magnitude level.</li></ul>
+View the Data on the Map, Legend coorosponds to magnitude level.</li>
+</ul>
 </li>
 
 
