@@ -10,7 +10,6 @@ d3.json(usgsUrl, function(data) {
   d3.json(platesUrl, function(data){
     var platesData = data.features
 
-    console.log(earthquakeData)
     createMap(earthquakeData,platesData)
   })
 });
