@@ -50,8 +50,8 @@ insert copy here
 
 
 <li><p>For Step 2</p>Advanced Control Options for map.<ul>
-<li>To use: From the Layer Select menu in the upper right hand corner select one base layer and one or both overlays.</li>
-<li>Base Layer Options:<ul><li>Street View</li><li>Satellite</li><li>Dark Map</li><li>Outdoor Map</li></ul></li>
+<li>To use: From the Layer Select menu in the upper right hand corner select one base layer and one or both overlays.</li><br>
+<li>Base Layer Options:<ul><li>Street View</li><li>Satellite</li><li>Dark Map</li><li>Outdoor Map</li></ul></li><br>
 <li>Overlay Options:<ul><li>Earthquakes</li><li>Techtonic Plates</li></ul></li>
 </li></ol>
 <br>
