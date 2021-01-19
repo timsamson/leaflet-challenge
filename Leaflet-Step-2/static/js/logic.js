@@ -10,9 +10,11 @@ d3.json(usgsUrl, function(data) {
   d3.json(platesUrl, function(data){
     var platesData = data.features
 
+    console.log(earthquakeData)
     createMap(earthquakeData,platesData)
   })
 });
+
 
 function createMap(earthquakeData, platesData) {
   var EarthquakeMarkers = earthquakeData.map((feature) =>
@@ -24,11 +26,12 @@ function createMap(earthquakeData, platesData) {
         weight: 0.5,
         fill: true,
         fillColor: magColor(feature.properties.mag),
-        fillOpacity: 0.9   
+        fillOpacity: magOpacity(feature.geometry.coordinates[2])   
       })
-      .bindPopup("<h1> Magnitude : " + feature.properties.mag +
-      "</h1><hr><h3>" + feature.properties.place +
-      "</h3><hr><p>" + new Date(feature.properties.time) + "</p>")
+      .bindPopup("<center><h1> Magnitude : " + feature.properties.mag +
+      "</h1><h3>" + feature.properties.place +
+      "</h3><hr><p>" + new Date(feature.properties.time) + 
+      "</p><p> Depth : " + feature.geometry.coordinates[2] + "</center></p>")
     )
 
   // Add the earthquakes layer to a marker cluster group.
@@ -109,22 +112,22 @@ legend.onAdd = function() {
   var labels = [];
 
 // Add min & max
-  var legendInfo = "<h2>Magnitude Level</h2>" +
+  var legendInfo = "<h3><center>  Magnitude Level</center></h3>" +
     "<div class=\"labels\">" + "</div>";
 
   div.innerHTML = legendInfo;
 
   grades.forEach(function(grades, index) {
     if (index === 0){
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude less than " + [index +1 ]+ 
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Less than " + [index +1 ]+ 
       "  </li>");
     }
     else if (index === 5){
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  " + [index]+ 
       " and Greater" + "  </li>");
     }
     else{
-      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  Magnitude " + [index]+ 
+      labels.push("<li style=\"background-color: " + colors[index] + "\">" + "  " + [index]+ 
       "&ndash;" + [index+1] + "  </li>");
     }
 
@@ -155,6 +158,14 @@ legend.addTo(myMap);
     return color;
     
     };
+
+//Magnitude Depth
+    function magOpacity(data) {
+      var opacity = data / 5;
+
+    return opacity;
+
+};
 
 // Radius
   function magCheck(mag) {
