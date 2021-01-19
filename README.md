@@ -6,13 +6,13 @@ insert copy here
 <br>
 <h3>Example Visualizations</h3>
 <h4>Step 1 Map Visualization</h4>
-!["Step 1 Map Visualization"](://imgages/Step_1.png)
+!["Step 1 Map Visualization"](https://github.com/timsamson/leaflet-challenge/blob/main/Images/Step_1.png)
 <h4>Step 2 Map Visualization</h4>
-!["Step 2 Map Visualization"](://imgages/Step_2_wo_popup.png)
+!["Step 2 Map Visualization"](https://github.com/timsamson/leaflet-challenge/blob/main/Images/Step_2_wo_popup.png)
 <h4>Step 2 Satallite Map Visualization</h4>
-!["Step 2 Satallite Map Visualization"](://imgages/Step_2_Sat_w_popup.png)
+!["Step 2 Satallite Map Visualization"](https://github.com/timsamson/leaflet-challenge/blob/main/Images/Step_2_Sat_w_popup.png)
 <h4>Step 2 Dark Map Visualization</h4>
-!["Step 2 Dark Map Visualization"](://imgages/Step_2_dark_w_popup.png)
+!["Step 2 Dark Map Visualization"](https://github.com/timsamson/leaflet-challenge/blob/main/Images/Step_2_dark_w_popup.png)
 
 <br>
 <h3>File Structure</h3>
